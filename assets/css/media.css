@@ -1,0 +1,152 @@
+@media screen and (min-width:992px){
+	
+	.sidebar.shrink {
+		flex-basis: 95px;
+		min-width: 95px;
+	}
+
+	.sidebar.shrink + .rightArea {
+		flex-basis: calc(100% - 95px);
+		max-width: calc(100% - 95px);
+	}
+
+	.sidebar.shrink .sidebarList li a {
+		justify-content: center;
+		flex-wrap: wrap;
+		display: block;
+		text-align: center;
+	}
+
+	.sidebar.shrink .sidebarList li a span {
+		display: block;
+		font-size: 12px;
+		text-align: center;
+	}
+	.sidebar.shrink .sidebarList li a span, 
+	.sidebar.shrink .sidebarUserDetails .userImg span,
+	.sidebar.shrink .brand span {
+		display: none;
+	}
+	.sidebar.shrink .sidebarUserDetails {
+		left: 50%;
+		transform: translate(-50%);
+	}
+}
+@media screen and (max-width: 992px){
+	.desktop{display: none;}
+    .mobile{display: block !important; }
+	.brand img {
+        margin: 0 auto;
+    }
+    .topHeader .listInline{
+        gap: 12px;
+    }
+	.sidebar {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 999;
+		width: 280px;
+		transform: translateX(-320px);
+		transition: all 500ms ease;
+		box-shadow: 0 0 17px #00000061;
+	}
+	.sidebar.shrink{
+		transform: translateX(0px);
+		transition: all 500ms ease;
+	} 
+	.rightArea {
+		flex-basis: calc(100%);
+		max-width: calc(100%);
+	}
+	.brand .hamburger.sidebarToggle {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		padding: 0;
+		background: transparent;
+		max-width: 25px;
+	}
+    
+    
+    
+
+    /*.brand {
+        padding: 10px;
+    }
+	.sidebar {
+        flex-basis: 95px;
+        min-width: 95px;
+    }
+	.sidebarList li a {
+        justify-content: center;
+        flex-wrap: wrap;
+        display: block;
+        text-align: center;
+    }
+    .rightArea {
+        flex-basis: calc(100% - 95px);
+        max-width: calc(100% - 95px);
+    }
+	.brand span{
+		display: none;
+	}
+	.sidebarList li a span {
+        display: none;
+    } */
+
+
+    .subHeading {
+        font-size: 16px;
+    }
+
+	.colorBtn {
+		padding: 10px 10px;
+		white-space: nowrap;
+	}
+
+	.dashboardContent {
+	    padding: 20px;
+	}
+
+	.topHeader {
+	    padding: 0 20px;
+	}
+
+	.heading {
+	    display: flex;
+	    align-items: center;
+	    font-size: 21px;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+	/* .sidebarUserDetails .userImg span {
+		display: none;
+	}
+	
+	.sidebarUserDetails {
+		left: 50%;
+		transform: translate(-50%);
+	} */
+	.customtable{
+		margin-top: 25px;
+		padding: 15px;
+	}
+	.overflow{
+		overflow: auto;
+	}
+	.calendar_weekdays div, .calendar_content div {
+		font-size: 12px !important;
+		padding: 8px 0;
+	}
+	
+	.calendar_content div.today:after {
+		width: 25px;
+		height: 25px;
+	}
+	
+}
+@media only screen and (max-width: 767px){
+	
+
+}

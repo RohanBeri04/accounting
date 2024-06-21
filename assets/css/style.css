@@ -1,0 +1,544 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"); html {
+    --scrollbarBG: #fdfdfd;
+    --thumbBG: #f1f1f1;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: rgb(255, 255, 255);
+    overflow: hidden auto;
+    font-size: 14px;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+    transition: all 400ms ease 0s;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+button {
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+input, button {
+    outline: none;
+    box-shadow: none;
+}
+
+.listInline {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.pageWrp {
+    display: flex;
+}
+
+.btn {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn-success {
+    color: rgb(41, 201, 47);
+    background: rgba(2, 255, 12, 0.15);
+    border: none;
+}
+
+.sticky-top {
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex-basis: 250px;
+    background: rgb(35, 42, 79);
+    min-height: 100vh;
+    border-radius: 0px;
+    border-right: 1px solid rgb(211, 211, 211);
+}
+
+.rightArea {
+    flex-basis: calc(100% - 250px);
+    padding: 0px;
+    max-width: calc(100% - 250px);
+}
+
+.brand {
+    padding: 20px 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.27);
+}
+
+.brand span {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.sidebar.shrink .brand {
+    padding: 20px 10px;
+}
+
+.brand a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.sidebarList li a {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.sidebarList li a::before, .sidebarList li.active a::before {
+    width: 5px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px 10px 10px 0px;
+    opacity: 0;
+    display: none;
+}
+
+.sidebarList li a:hover::before, .sidebarList li.active a::before {
+    opacity: 1;
+}
+
+.sidebarList li a:hover {
+    background: rgb(91, 209, 198);
+    color: rgb(255, 255, 255);
+}
+
+.sidebarList li a img {
+    max-height: 25px;
+}
+
+.sidebarList li .border {
+    border-top: 1px solid rgb(64, 65, 74) !important;
+    border-right: 1px solid rgb(64, 65, 74) !important;
+    border-left: 1px solid rgb(64, 65, 74) !important;
+    border-image: initial !important;
+    border-bottom: none !important;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0px 30px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 10px;
+}
+img.hamburger {
+    max-width: 40px;
+    background: rgb(244, 245, 247);
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+}
+.topHeader .listInline {
+    align-items: center;
+    gap: 30px;
+}
+
+.topHeader .listInline li.dropdown > a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: rgb(37, 39, 51);
+    font-weight: 600;
+}
+
+.topHeader .listInline li.dropdown img, .userProfileImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.topHeader li sup {
+    width: 16px;
+    height: 16px;
+    background: rgb(194, 49, 91);
+    display: flex;
+    position: absolute;
+    right: -3px;
+    top: -16px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+a.notification {
+    background: rgb(244, 245, 247);
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.topHeader li {
+    position: relative;
+}
+.subHeading {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(45, 55, 72);
+}
+
+
+.input-group{
+    width: 33%;
+}
+
+
+
+
+/* table  */
+
+.customTable {
+    overflow: auto;
+}
+
+.customTable tr th {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-top: none;
+    font-size: 17px;
+    color: rgb(58, 58, 58);
+    font-weight: 400;
+}
+
+.customTable tr td {
+    border: none;
+    font-size: 16px;
+    color: rgb(58, 58, 58);
+    font-weight: 400;
+}
+
+.customTable tr td span {
+    display: block;
+    font-size: 14px;
+    color: rgb(143, 148, 152);
+}
+
+.unorderList {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.rowWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fiveCols .column {
+    flex: 0 0 calc(20% - 17px);
+}
+
+.profileDetails h3 {
+    color: rgb(58, 58, 58);
+    font-size: 16px;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.profileDetails p {
+    color: rgb(143, 148, 152);
+    font-size: 14px;
+    margin: 0px;
+}
+
+.profileDetails {
+    padding: 10px 0px 0px;
+}
+
+.profileBxImg img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profileDetails .btn-success {
+    padding: 6px 9px;
+    font-size: 11px;
+    border-radius: 10px;
+}
+
+.heading {
+    color: rgb(27, 31, 58);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.dashboardContent {
+    padding: 30px 30px 0px;
+    background: rgb(244, 245, 247);
+}
+
+.lineBtn {
+    border: 1px solid rgb(194, 194, 194);
+    background: rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+}
+
+.lineBtn img {
+    max-height: 17px;
+}
+
+.displayBx {
+    border: 1.94294px solid rgb(134, 134, 134);
+    border-radius: 30.1156px;
+    overflow: hidden;
+}
+
+.displayBx .listInline.justify-content-between {
+    padding: 20px;
+}
+
+.displayBx h3 {
+    font-size: 22px;
+    color: rgb(56, 56, 56);
+    margin: 0px;
+}
+
+.displayBxImg img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.paymentTable h3 {
+    color: rgb(86, 86, 86);
+    font-size: 24px;
+    margin: 0px;
+}
+
+.paymentTable .listInline.justify-content-between {
+    border-bottom: 1px solid rgb(132, 132, 132);
+    padding: 15px 0px;
+}
+
+.paymentTable .listInline.justify-content-between p {
+    color: rgb(152, 152, 152);
+    font-size: 15px;
+}
+
+.paymentTable .listInline.justify-content-between h4 {
+    margin: 0px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sidebarUserDetails {
+    text-align: center;
+}
+
+.sidebarUserDetails h3 {
+    color: rgb(19, 15, 38);
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.sidebarUserDetails .userImg {
+    margin: 0px auto;
+}
+
+.sidebarUserDetails .listInline {
+    justify-content: center;
+}
+
+.sidebarUserDetails .listInline img {
+    height: 40px;
+}
+
+.sidebarUserDetails a {
+    display: flex;
+    gap: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.sidebarUserDetails {
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+}
+
+.chartBx {
+    padding: 20px;
+    background: rgb(255, 241, 216);
+    border-radius: 31px;
+}
+
+.colorBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(79, 209, 197);
+    border-radius: 10px;
+    color: rgb(46, 52, 88);
+    border: none;
+}
+
+.heading .colorBtn {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.subHeading .colorBtn {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.heading .colorBtn {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.subHeading .colorBtn {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.customtable {
+    padding: 25px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.customtable table {
+    width: 100%;
+}
+
+.customtable .subHeading {
+    margin-bottom: 20px;
+}
+
+.customtable table th {
+    background: rgb(219, 220, 222);
+    text-align: center;
+}
+
+.customtable table th, .customtable table td {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.customtable table th:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.customtable table th:last-child {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.select2 {
+    padding: 5px;
+    border: 1px solid rgb(237, 58, 58);
+    background: rgb(252, 235, 234);
+    border-radius: 10px;
+    outline: none;
+    color: rgb(244, 60, 60);
+    box-shadow: none;
+}
+
+.customContent h4 {
+    color: rgb(45, 55, 72);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.customContent .d-flex .d-flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    min-width: 40px;
+}
+
+.customContent h5 {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(45, 55, 72);
+    margin: 5px 0px 0px;
+}
+
+.calendar_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8px;
+}
+
+.calendar_header h2 {
+    width: auto;
+    float: none;
+    padding: 0px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    margin: 0px;
+}
+
+.calendar_header .d-flex {
+    min-width: 30px;
+    justify-content: space-between;
+    padding-right: 0px;
+}
+
+.calendar_header button {
+    color: rgb(46, 52, 88);
+    width: auto;
+    float: none;
+    outline: none;
+}
+
+.calendar_weekdays {
+    background: rgb(255, 255, 255);
+}
+
+.calendar_weekdays div {
+    color: rgb(0, 0, 0) !important;
+    /* padding-top: 0px; */
+}
+
+div#calendar_first {
+    padding: 25px 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* .calendar_content div.blank {
+    display: none;
+} */
+
+.calendar_content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
